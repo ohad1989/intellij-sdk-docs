@@ -73,7 +73,7 @@ Note that also, in this case, you still need to put some default values in your 
 
 ## Deploying a Plugin with Gradle
 The first step when deploying a plugin is to confirm that it works correctly. 
-You may wish to verify this by [installing your plugin from disk](https://www.jetbrains.com/help/idea/managing-plugins.html) on a fresh instance of your target IDE(s). 
+You may wish to verify this by [installing your plugin from disk](https://www.jetbrains.com/help/idea/managing-plugins.html) on a fresh instance of your target IDE(s). The plugin is generated under build\distributions directory.
 
 ### Publishing a Plugin
 Once you are confident the plugin works as intended, make sure the plugin version is updated, as the JetBrains Plugin repository won't accept multiple artifacts with the same version. 
