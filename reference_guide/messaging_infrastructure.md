@@ -72,7 +72,7 @@ public interface ChangeActionNotifier {
 
 ```java
 public void init(MessageBus bus) {
-    bus.connect().subscribe(ActionTopics.CHANGE_ACTION_TOPIC, new ChangeActionNotifier() {
+    bus.connect().subscribe(ChangeActionNotifier.CHANGE_ACTION_TOPIC, new ChangeActionNotifier() {
         @Override
         public void beforeAction(Context context) {
             // Process 'before action' event.
@@ -91,7 +91,7 @@ public void init(MessageBus bus) {
 
 ```java
 public void doChange(Context context) {
-    ChangeActionNotifier publisher = myBus.syncPublisher(ActionTopics.CHANGE_ACTION_TOPIC);
+    ChangeActionNotifier publisher = myBus.syncPublisher(ChangeActionNotifier.CHANGE_ACTION_TOPIC);
     publisher.beforeAction(context);
     try {
         // Do action
